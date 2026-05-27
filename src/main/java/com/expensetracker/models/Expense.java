@@ -3,7 +3,7 @@ package com.expensetracker.models;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class ExpenseModel{
+public class Expense{
 	
 	private int id;
 	private String description;
@@ -12,7 +12,7 @@ public class ExpenseModel{
 	private LocalDate expenseDate;
 	
 	//Constructor for creating a new expense (no id because DB guarantees it)
-	public ExpenseModel(String description, BigDecimal amount, String category, LocalDate expenseDate) {
+	public Expense(String description, BigDecimal amount, String category, LocalDate expenseDate) {
 		this.description = description;
 		this.amount = amount;
 		this.category = category;
@@ -20,7 +20,7 @@ public class ExpenseModel{
 	}
 	
 	//Constructor for fetching an existing expense
-	public ExpenseModel(int id, String description, BigDecimal amount, String category, LocalDate expenseDate) {
+	public Expense(int id, String description, BigDecimal amount, String category, LocalDate expenseDate) {
 		this.id = id;
 		this.description = description;
 		this.amount = amount;
