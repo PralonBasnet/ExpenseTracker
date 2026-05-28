@@ -42,37 +42,35 @@ I deliberately avoided Spring and Hibernate to understand how REST APIs actually
 
 ## Project structure
 
----
-src/main/
-├── java/
-│   ├── servlets/     # ExpenseServlet, SummaryServlet
-│   ├── models/       # Expense entity
-│   ├── dao/          # ExpenseDAO (JDBC)
-│   └── utils/        # DBConnection
-└── webapp/
-├── index.html    # Single page frontend
-├── css/          # Dark theme styles
-├── js/           # fetch() API calls
-└── WEB-INF/
----
+    src/main/
+    ├── java/
+    │   ├── servlets/     # ExpenseServlet, SummaryServlet
+    │   ├── models/       # Expense entity
+    │   ├── dao/          # ExpenseDAO (JDBC)
+    │   └── utils/        # DBConnection
+    └── webapp/
+        ├── index.html    # Single page frontend
+        ├── css/          # Dark theme styles
+        ├── js/           # fetch() API calls
+        └── WEB-INF/
 
 ## Running locally
 
 **Prerequisites:** Java 21, Maven, MySQL 8, Tomcat 10.1
 
 1. Clone the repo
-```bash
+   ```bash
    git clone https://github.com/PralonBasnet/ExpenseTracker.git
-```
+   ```
 2. Create the database
-```bash
+   ```bash
    mysql -u root -p < expense_tracker.sql
-```
+   ```
 3. Update DB credentials in `src/main/java/com/expensetracker/utils/DBConnection.java`
 4. Build and deploy
-```bash
+   ```bash
    mvn clean package
-```
+   ```
 5. Deploy `target/ExpenseTracker.war` to Tomcat 10.1
 6. Open `http://localhost:8080/ExpenseTracker`
 
@@ -84,3 +82,5 @@ src/main/
 - Write unit tests for the DAO layer
 
 ---
+
+Built by [Pralon Basnet](https://github.com/PralonBasnet) — Kathmandu, Nepal 🇳🇵
