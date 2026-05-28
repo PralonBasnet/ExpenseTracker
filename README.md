@@ -4,8 +4,7 @@ A Jakarta EE REST API for tracking personal expenses, with a vanilla JS frontend
 
 Built with plain servlets and JDBC — no Spring, no Hibernate — to deeply understand how REST APIs work at the HTTP level.
 
-![ExpenseTracker screenshot]( ~/eclipse-workspace/ExpenseTracker/src/main/webapp/docs/screenshot.png
-)
+![ExpenseTracker screenshot](ExpenseTracker/src/main/webapp/docs/screenshot.png)
 
 ## What it does
 
