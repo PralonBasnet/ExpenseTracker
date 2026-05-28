@@ -16,4 +16,4 @@ target/
 Thumbs.db
 
 # Logs
-*.logsrc/webapp/
+*.log

@@ -131,7 +131,7 @@ public class ExpenseDAO {
 				rs.getString("description"),
 				rs.getBigDecimal("amount"),
 				rs.getString("category"),
-				rs.getDate("expense_date").toLocalDate()
+				rs.getDate("expesne_date").toLocalDate()
 				);
 	}
 }
