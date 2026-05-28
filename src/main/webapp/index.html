@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1> Expense Tracker</h1>
+
+    <!-- SUMMARY CARD -->
+    <div class="card" id="summary-card">
+        <h2>This Month</h2>
+        <div class="total" id="total-amount">Loading...</div>
+        <div class="breakdown" id="breakdown"></div>
+    </div>
+
+    <!-- ADD EXPENSE FORM -->
+    <div class="card">
+        <h2>Add Expense</h2>
+        <div class="form-group">
+            <input type="text" id="description" placeholder="Description" />
+        </div>
+        <div class="form-group">
+            <input type="number" id="amount" placeholder="Amount (NPR)" step="0.01" />
+        </div>
+        <div class="form-group">
+            <select id="category">
+                <option value="">Select category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Health">Health</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="date" id="expense-date" />
+        </div>
+        <button onclick="addExpense()">Add Expense</button>
+        <div id="form-message"></div>
+    </div>
+
+    <!-- EXPENSES TABLE -->
+    <div class="card">
+        <h2>Expenses</h2>
+        <div class="filter-row">
+            <select id="filter-category" onchange="filterExpenses()">
+                <option value="">All categories</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Health">Health</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expenses-table">
+                <tr><td colspan="5">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
